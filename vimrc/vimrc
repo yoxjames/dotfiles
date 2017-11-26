@@ -1,0 +1,55 @@
+set encoding=utf-8 " Always use UTF-8
+
+""" Remove Toolbar and Menu Bars when using the GUI.
+if has('gui_running') 
+	set guioptions-=T " No Toolbar
+	set guioptions-=m " No Menus
+endif
+
+""" General text editing stuff
+set tabstop=2 softtabstop=2 expandtab shiftwidth=2 smarttab " Tab stuff
+set number " Show line numbers
+set hlsearch
+set backspace=indent,eol,start " Take care of the quirky default backspace behavior
+
+""" Indent Stuff
+set autoindent
+
+syntax on
+filetype plugin indent on
+
+""" Select defaut color theme.
+set t_Co=256
+colorscheme murphy
+
+""" Setup font depending on how gVIM is being used. Different font used on windoze
+if has('gui_running')
+  if has('gui_gtk2')
+    set guifont=Inconsolata\ 12
+  elseif has('gui_gtk3')
+    set guifont=Inconsolata\ 12
+  elseif has('gui_win32')
+    set guifont=Consolas:h9:b:cANSI
+  endif
+endif
+
+set wildmode=list:longest,full " Autocompletion
+
+""" No line wrapping and no maximum text width by default
+set nowrap " No line wrapping
+set textwidth=0
+
+""" GUI display tweaks.
+if has('gui_running')
+  set guitablabel=\[%N\]\ %t\ %M " Show tab number, tab name, then a if the tab was modified without saving
+  set cursorline
+endif
+
+""" Mouse
+set mouse=a " Even in command line allow mouse across all modes
+
+""" Misc Stuff
+set ruler " Show the ruler
+set laststatus=2 " Always show the status bar on the last line
+set showcmd
+set showmode " Show the mode we are in
