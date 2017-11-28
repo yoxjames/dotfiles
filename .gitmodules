@@ -1,3 +1,6 @@
 [submodule "vimrc/pack/yoxjames/start/vim-airline"]
 	path = vimrc/pack/yoxjames/start/vim-airline
 	url = https://github.com/vim-airline/vim-airline
+[submodule "vimrc/pack/yoxjames/start/indentLine"]
+	path = vimrc/pack/yoxjames/start/indentLine
+	url = https://github.com/Yggdroot/indentLine.git
