@@ -4,6 +4,9 @@ set encoding=utf-8 " Always use UTF-8
 if has('gui_running') 
 	set guioptions-=T " No Toolbar
 	set guioptions-=m " No Menus
+  set guioptions-=c " No popups, use console based prompt
+  set guioptions-=r " Dont always show scrollbar
+  set guioptions-=e " Dont use GUI tabs
 endif
 
 """ General text editing stuff
@@ -49,7 +52,4 @@ endif
 set mouse=a " Even in command line allow mouse across all modes
 
 """ Misc Stuff
-set ruler " Show the ruler
-set laststatus=2 " Always show the status bar on the last line
-set showcmd
-set showmode " Show the mode we are in
+set noshowmode " Seems redundant with vim airline
