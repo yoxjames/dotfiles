@@ -51,5 +51,8 @@ endif
 """ Mouse
 set mouse=a " Even in command line allow mouse across all modes
 
-""" Misc Stuff
+""" Appearance Stuff
 set noshowmode " Seems redundant with vim airline
+set background=dark
+set termguicolors
+colorscheme ceudah

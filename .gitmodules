@@ -4,3 +4,6 @@
 [submodule "vimrc/pack/yoxjames/start/indentLine"]
 	path = vimrc/pack/yoxjames/start/indentLine
 	url = https://github.com/Yggdroot/indentLine.git
+[submodule "vimrc/git/ceudah"]
+	path = vimrc/git/ceudah
+	url = https://github.com/emhaye/ceudah.vim.git
