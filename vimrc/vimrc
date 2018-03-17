@@ -1,10 +1,11 @@
 set encoding=utf-8 " Always use UTF-8
+set hidden " Use hidden buffers instead of unloading buffers
 
 """ Remove Toolbar and Menu Bars when using the GUI.
 if has('gui_running') 
 	set guioptions-=T " No Toolbar
 	set guioptions-=m " No Menus
-  set guioptions-=c " No popups, use console based prompt
+  set guioptions+=c " No popups, use console based prompt
   set guioptions-=r " Dont always show scrollbar
   set guioptions-=e " Dont use GUI tabs
 endif
@@ -40,12 +41,10 @@ set wildmode=list:longest,full " Autocompletion
 
 """ No line wrapping and no maximum text width by default
 set nowrap " No line wrapping
-set textwidth=0
 
 """ GUI display tweaks.
 if has('gui_running')
   set guitablabel=\[%N\]\ %t\ %M " Show tab number, tab name, then a if the tab was modified without saving
-  set cursorline
 endif
 
 """ Mouse
@@ -54,5 +53,3 @@ set mouse=a " Even in command line allow mouse across all modes
 """ Appearance Stuff
 set noshowmode " Seems redundant with vim airline
 set background=dark
-set termguicolors
-colorscheme ceudah
