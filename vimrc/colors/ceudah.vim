@@ -1,1 +1,0 @@
-../git/ceudah/colors/ceudah.vim
